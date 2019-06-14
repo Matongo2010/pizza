@@ -1,5 +1,5 @@
 
-@import url(bootstrap.css);
+@import url("bootstrap.css");
 
 
 
@@ -7,5 +7,6 @@
     background-image: url("../images/pizza\ background\ .jpeg");
     background-size: cover;
     background-repeat: no-repeat;
+    
 }
 
