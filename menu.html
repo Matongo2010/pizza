@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/styles.css
-    ">
-    <title>menu</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+
 </head>
+
 <body>
+
+    <h2>MAKE AN ORDER NOW !!!</h2>
     <div class="container">
         <div class="row">
             <div class="col-sm">
@@ -16,12 +20,181 @@
             </div>
             <div class="col-sm">
                 <img src="images/cheese-crust-cuisine-1069449.jpg" height="400" width="520" alt="">
-    
+
             </div>
-    
-    
+            <br>
+            <br>
+            <p>At Pizza World, we do doorstep delivery in less than 24 hours. All you need to do is to make your order
+                below and and we will get in touch to you.</p>
+            <div class="row">
+                <div class="col-sm">
+                    <h3>size</h3> <br>
+                    <form action="">
+                        <input type="checkbox" name="Large" id="large">Large</input>
+                        <input type="checkbox" name="Medium" id="medium">Medium</input>
+                        <input type="checkbox" name="Small" id="small">Small</input>
+                    </form>
+                </div>
+
+                <div class="col-sm">
+
+                    <h3>Crust</h3>
+
+                    <form action="crust">
+                        <input type="checkbox" name="Large" id="crispy">crispy</input>
+                        <input type="checkbox" name="Medium" id="stuffed">stuffed</input>
+                        <input type="checkbox" name="Small" id="gluttenFree">glutten-free</input>
+                    </form>
+                </div>
+                <div class="col-sm">
+                    <h3>Toppings</h3>
+                    <form action="">
+                        <input type="checkbox" name="m" id="mushroom">mushroom</input>
+                        <input type="checkbox" name="g" id="onions">onions</input>
+                        <input type="checkbox" name="s" id="sausage">sausage</input>
+                        <input type="checkbox" name="sr" id="strawberry">strawberry</input>
+
+                    </form>
+                </div>
+
+            </div>
+            <button id="totalCost">Make Order</button>
+
+
+        </div>
+        <div class="row">
+            <div class="col-sm">
+
+            </div>
+            <div class="col-sm">
+
+            </div>
+
         </div>
     </div>
+
+
+    <script src="js/main.js"></script>
+    
+<script>
+
+var large = document.getElementById("large");
+var medium = document.getElementById("medium");
+var small = document.getElementById("small");
+var cripsy = document.getElementById("cripsy");
+var stuffed = document.getElementById("stuffed");
+var gluttenFree = document.getElementById("gluttenFree");
+var mushroom = document.getElementById("mushroom");
+var onions = document.getElementById("onions");
+var sausage = document.getElementById("sausage");
+var strawberry = document.getElementById("strawberry");
+var price = 0
+
+
+$(document).ready(function(e) {
+  $("#totalCost").click(function(e) {
+    if ($("#large").is(":checked")) {
+      console.log("true");
+      price += 900;
+      console.log(price);
+    } else if ($("#large").is(":not(:checked)")) {
+      price += 0;
+      console.log("false");
+      console.log(price);
+    }
+    if ($("#medium").is(":checked")) {
+      console.log("true");
+      price += 700;
+      console.log(price);
+    } else if ($("#medium").is(":not(:checked)")) {
+      price += 0;
+      console.log("false");
+      console.log(price);
+    }
+    if ($("#small").is(":checked")) {
+      console.log("true");
+      price += 500;
+      console.log(price);
+    } else if ($("#small").is(":not(:checked)")) {
+      price += 0;
+      console.log("false");
+      console.log(price);
+    }
+    if ($("#cripsy").is(":checked")) {
+      console.log("true");
+      price += 150;
+      console.log(price);
+    } else if ($("#cripsy").is(":not(:checked)")) {
+      price += 0;
+      console.log("false");
+      console.log(price);
+    }
+    if ($("#gluttenFree").is(":checked")) {
+      console.log("true");
+      price += 150;
+      console.log(price);
+    } else if ($("#gluttenFree").is(":not(:checked)")) {
+      price += 0;
+      console.log("false");
+      console.log(price);
+    }
+    if ($("#stuffed").is(":checked")) {
+      console.log("true");
+      price += 200;
+      console.log(price);
+    } else if ($("#stuffed").is(":not(:checked)")) {
+      price += 0;
+      console.log("false");
+      console.log(price);
+    }
+    if ($("#mushroom").is(":checked")) {
+      console.log("true");
+      price += 150;
+      console.log(price);
+    } else if ($("#mushroom").is(":not(:checked)")) {
+      price += 0;
+      console.log("false");
+      console.log(price);
+    }
+    if ($("#onions").is(":checked")) {
+      console.log("true");
+      price += 150;
+      console.log(price);
+    } else if ($("#onions").is(":not(:checked)")) {
+      price += 0;
+      console.log("false");
+      console.log(price);
+    }
+    if ($("#sausage").is(":checked")) {
+      console.log("true");
+      price += 150;
+      console.log(price);
+    } else if ($("#sausage").is(":not(:checked)")) {
+      price += 0;
+      console.log("false");
+      console.log(price);
+    }
+    if ($("#strawberry").is(":checked")) {
+      console.log("true");
+      price += 200;
+      console.log(price);
+    } else if ($("#strawberry").is(":not(:checked)")) {
+      price += 0;
+      console.log("false");
+      console.log(price);
+    }
+    
+    function grandTotal(){
+      return  price+200;
+    };
+     var done = alert(
+       "Total Cost is Ksh " +price +" Do you want it delivered at an extra Ksh 200 ?"
+     );
+  });
+});
+
+</script>
     
 </body>
+
 </html>
